@@ -7,4 +7,5 @@ format: html
 legos <- read.csv("https://wjhopper.github.io/SDS-201/data/legos.csv")
 ```
 
-##HI!
+##HI!!
+
