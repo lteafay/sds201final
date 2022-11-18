@@ -1,9 +1,10 @@
 ---
-title: "Untitled"
+title: "SDS Final Project"
+authors: Laura Fay, Abby Kaufman, Casey MacGibbon
 format: html
 ---
 ## Getting Set Up
-```{r}
+```{r, echo = FALSE}
 legos <- read.csv("https://wjhopper.github.io/SDS-201/data/legos.csv")
 ```
 
