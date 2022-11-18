@@ -1,0 +1,9 @@
+---
+title: "Untitled"
+format: html
+---
+## Getting Set Up
+```{r}
+legos <- read.csv("https://wjhopper.github.io/SDS-201/data/legos.csv")
+```
+
