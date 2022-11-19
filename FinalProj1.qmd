@@ -5,6 +5,8 @@ format: html
 ---
 ## Getting Set Up
 ```{r, echo = FALSE}
+library(ggplot2)
+library(tidyverse)
 legos <- read.csv("https://wjhopper.github.io/SDS-201/data/legos.csv")
 ```
 
@@ -12,3 +14,8 @@ legos <- read.csv("https://wjhopper.github.io/SDS-201/data/legos.csv")
 This is me trying again!
 And again....
 and again!!
+
+```{r}
+ggplot(data = legos,aes( x = Pieces, y = Price, color = Minifigures)) + geom_point()
+```
+
