@@ -15,7 +15,7 @@ This is me trying again!
 And again....
 and again!!
 
-```{r}
-ggplot(data = legos,aes( x = Pieces, y = Price, color = Minifigures)) + geom_point()
+```{r, echo = FALSE}
+ggplot(data = legos,aes( x = Pieces, y = Price, color = Minifigures)) + geom_point() + scale_color_continuous(low = "pink", high = "maroon")
 ```
 
