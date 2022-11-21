@@ -8,6 +8,7 @@ format:
 ```{r, echo = FALSE}
 library(ggplot2)
 library(tidyverse)
+library(dplyr)
 legos <- read.csv("https://wjhopper.github.io/SDS-201/data/legos.csv")
 ```
 
@@ -30,10 +31,7 @@ ggplot(data = legos,aes( x = Pieces, y = Price, color = Minifigures)) + geom_poi
 
 ##Trying to find the mean price of the legos by brand, but we're confused why some brands have NA values
 ```{r}
-mean_price_legos <- legos %>% 
-  group_by(Theme) %>% 
-  filter(!is.na(mean_price_legos) %>% 
-           summarize(mean = mean(Price))
+mean_price_legos <- legos %>% filter(!is.na(legos)) %>% group_by(Theme) %>% summarize(mean_price = mean(Price))
 ```
 
 ##Plot of mean prices, but many large themes have NA
