@@ -5,6 +5,11 @@ format:
   html:
     self-contained: true
 ---
+```{r, echo = FALSE}
+library(ggplot2)
+library(tidyverse)
+legos <- read.csv("https://wjhopper.github.io/SDS-201/data/legos.csv")
+```
 
 ## Introduction
 Background information paragraph on legos + prices maybe affordibility for kids
@@ -13,20 +18,13 @@ To address this question, we used a dataset from
 
 Filtered, outcome variable and also our explanatory vars
 
-
-```{r, echo = FALSE}
-library(ggplot2)
-library(tidyverse)
-legos <- read.csv("https://wjhopper.github.io/SDS-201/data/legos.csv")
+```{r}
+ggplot(data = legos, aes(x= Pieces)) + geom_histogram()
 ```
 
-##HI!!
-This is me trying again!
-And again....
-and again!!
 
 ```{r, echo = FALSE}
 ggplot(data = legos,aes( x = Pieces, y = Price, color = Minifigures)) + geom_point() + scale_color_continuous(low = "pink", high = "maroon")
 ```
 
-hi
+
