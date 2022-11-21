@@ -1,7 +1,9 @@
 ---
 title: "SDS Final Project"
 authors: Laura Fay, Abby Kaufman, Casey MacGibbon
-format: html
+format:
+  html:
+    self-contained: true
 ---
 
 ## Introduction
