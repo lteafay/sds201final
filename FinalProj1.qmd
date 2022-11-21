@@ -22,9 +22,19 @@ Filtered, outcome variable and also our explanatory vars
 ggplot(data = legos, aes(x= Pieces)) + geom_histogram()
 ```
 
+The data has a clear right skew, with most of the lego sets having between 0 and 1,000 pieces. 
 
 ```{r, echo = FALSE}
 ggplot(data = legos,aes( x = Pieces, y = Price, color = Minifigures)) + geom_point() + scale_color_continuous(low = "pink", high = "maroon")
 ```
 
+##Trying to find the mean price of the legos by brand, but we're confused why some brands have NA values
+```{r}
+mean_price_legos <- legos %>% group_by(Theme) %>% summarize(mean = mean(Price))
+```
+
+##Plot of mean prices, but many large themes have NA
+```{r}
+ggplot(data = legos, aes(y= Theme, x= mean_price)) + geom_col()
+```
 
