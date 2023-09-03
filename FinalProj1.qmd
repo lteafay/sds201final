@@ -13,6 +13,9 @@ legos <- read.csv("https://wjhopper.github.io/SDS-201/data/legos.csv")
 ```
 
 ## Introduction
+
+hello
+
 Background information paragraph on legos + prices maybe affordibility for kids
 
 To address this question, we used a dataset from 
